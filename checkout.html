@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Checkout | FoodieHub</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="checkout">
+<div id="header"></div>
+<main>
+<section class="section narrow" id="checkoutBox"><h2>Checkout</h2>
+<form id="checkoutForm" class="card pad" novalidate>
+  <div class="field"><label>Full Name</label><input name="name"><small class="err"></small></div>
+  <div class="field"><label>Mobile Number</label><input name="mobile" inputmode="numeric" maxlength="10"><small class="err"></small></div>
+  <div class="field"><label>Email</label><input name="email" type="email"><small class="err"></small></div>
+  <div class="field"><label>Address</label><textarea name="address" rows="2"></textarea><small class="err"></small></div>
+  <div class="row2">
+    <div class="field"><label>City</label><input name="city"><small class="err"></small></div>
+    <div class="field"><label>Pincode</label><input name="pincode" inputmode="numeric" maxlength="6"><small class="err"></small></div>
+  </div>
+  <div class="field"><label>Payment Method</label>
+    <select name="payment"><option value="">Select payment method</option><option>Cash on Delivery</option><option>UPI</option><option>Credit/Debit Card</option></select><small class="err"></small></div>
+  <div id="orderTotal" class="total-line"></div>
+  <button class="btn full" type="submit">Place Order</button>
+</form></section>
+<section class="section narrow" id="confirmBox" hidden></section>
+</main>
+<div id="footer"></div>
+<div id="toast" class="toast"></div>
+<script src="js/script.js"></script>
+</body>
+</html>
